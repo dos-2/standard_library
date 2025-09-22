@@ -16,8 +16,8 @@ public:
   using const_iterator = const T*;
 
   // capacity
-  constexpr size_type size() const noexcept {return N;}
-  constexpr bool empty() const noexcept {return N == 0;}
+  [[nodiscard]] constexpr size_type size() const noexcept {return N;}
+  [[nodiscard]] constexpr bool empty() const noexcept {return N == 0;}
  
   // access
   reference operator[](size_type i) {return elems[i];}
